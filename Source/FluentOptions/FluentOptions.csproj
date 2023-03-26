@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!-- Project -->
+        <RootNamespace>MistyDotDev.FluentOptions</RootNamespace>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- Build -->
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <!-- NuGet -->
+        <PackageId>MistyDotDev.FluentOptions</PackageId>
+        <Title>MistyDotDev.FluentOptions</Title>
+        <Authors>MistyDotDev</Authors>
+        <Description>FluentValidation for options</Description>
+        <Version>1.0.0</Version>
+        <PackageProjectUrl>https://github.com/MistyDotDev/ignition</PackageProjectUrl>
+        <License>https://github.com/MistyDotDev/ignition/blob/main/LICENSE</License>
+        <RepositoryUrl>https://github.com/MistyDotDev/ignition</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.5.1" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="FluentOptions.Tests.Unit" />
+    </ItemGroup>
+
+</Project>

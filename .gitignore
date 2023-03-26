@@ -1,0 +1,11 @@
+# Build
+[Bb]in/
+[Oo]bj/
+
+# Editors
+.vs/
+.vscode/
+.idea/
+
+# macOS
+.DS_Store

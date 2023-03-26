@@ -1,0 +1,24 @@
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  nuget-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "7.0.x"
+
+      - name: Run Tests
+        run: dotnet test
+
+      - name: Create Packages
+        run: dotnet pack --configuration Release --output Packages
+
+      - name: Publish Packages
+        run: dotnet nuget push Packages/*.nupkg --skip-duplicate -k ${{ secrets.NUGET_KEY }} -s "https://api.nuget.org/v3/index.json"
