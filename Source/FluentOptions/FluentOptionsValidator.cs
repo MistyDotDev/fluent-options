@@ -27,7 +27,7 @@ internal sealed class FluentOptionsValidator<TOptions> : IValidateOptions<TOptio
             return ValidateOptionsResult.Success;
 
         var name = options.GetType().Name;
-        var errors = results.Errors.Select(r => $"Validation failed for {r.PropertyName} in {name}: {r.ErrorMessage}");
+        var errors = results.Errors.Select(r => $"Validation failed for {name}.{r.PropertyName}: {r.ErrorMessage}");
         return ValidateOptionsResult.Fail(errors);
     }
 }
