@@ -4,18 +4,17 @@ using Microsoft.Extensions.Options;
 namespace MistyDotDev.FluentOptions;
 
 /// <summary>
-/// Extension methods for registering FluentOptions validation.
+/// Extension methods for applying FluentValidation to an <see cref="OptionsBuilder{TOptions}"/>.
 /// </summary>
 public static class FluentOptionsExtensions
 {
     /// <summary>
-    /// Register an options instance for validation via FluentValidation.
+    /// Adds FluentValidation to the <see cref="OptionsBuilder{TOptions}"/>.
     /// </summary>
-    /// <typeparam name="TOptions">The options type to be configured.</typeparam>
-    /// <param name="builder">The options builder to add the services to.</param>
+    /// <typeparam name="TOptions">The options type to configure.</typeparam>
+    /// <param name="builder">The options builder to add FluentValidation to.</param>
     /// <returns>The <see cref="OptionsBuilder{TOptions}"/> so that additional calls can be chained.</returns>
-    public static OptionsBuilder<TOptions> ValidateFluently<TOptions>(this OptionsBuilder<TOptions> builder)
-        where TOptions : class
+    public static OptionsBuilder<TOptions> ValidateFluently<TOptions>(this OptionsBuilder<TOptions> builder) where TOptions : class
     {
         builder.Services.AddSingleton<IValidateOptions<TOptions>, FluentOptionsValidator<TOptions>>();
         return builder;

@@ -7,7 +7,7 @@ namespace MistyDotDev.FluentOptions;
 /// <summary>
 /// Validates an instance of <typeparamref name="TOptions"/> using FluentValidation.
 /// </summary>
-/// <typeparam name="TOptions">The type of the options to validate.</typeparam>
+/// <typeparam name="TOptions">The options type to validate.</typeparam>
 internal sealed class FluentOptionsValidator<TOptions> : IValidateOptions<TOptions> where TOptions : class
 {
     private readonly IServiceScopeFactory _scopeFactory;
