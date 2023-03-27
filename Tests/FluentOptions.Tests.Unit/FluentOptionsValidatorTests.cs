@@ -8,7 +8,7 @@ using Xunit;
 
 namespace FluentOptions.Tests.Unit;
 
-public class FluentOptionsValidatorTests
+public sealed class FluentOptionsValidatorTests
 {
     private readonly MockOptions _mockOptions = new();
     private readonly IValidator<MockOptions> _validator = Substitute.For<IValidator<MockOptions>>();
@@ -52,6 +52,6 @@ public class FluentOptionsValidatorTests
         result.Skipped.Should().BeFalse();
         result.Failed.Should().BeTrue();
         result.Failures.Should().HaveCount(1);
-        result.Failures.Should().ContainSingle(f => f.Contains("Message") && f.Contains("Test Message"));
+        result.Failures.Should().ContainSingle(f => f.Contains("MockOptions.Message") && f.Contains("Test Message"));
     }
 }

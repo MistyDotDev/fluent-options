@@ -6,10 +6,10 @@ using Xunit;
 
 namespace FluentOptions.Tests.Unit;
 
-public class FluentOptionsExtensionsTests
+public sealed class FluentOptionsExtensionsTests
 {
     [Fact]
-    public void ValidateFluently_Should_AddFluentOptionsValidatorToTheServiceCollection()
+    public void ValidateFluently_Should_AddFluentOptionsValidatorToTheServiceContainer()
     {
         // Arrange
         var services = new ServiceCollection();
