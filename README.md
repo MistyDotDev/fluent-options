@@ -2,7 +2,7 @@
 
 ## ❓ About
 
-Validate options using FluentValidation
+Validate options using FluentValidation!
 
 ## 📝 Installing
 
@@ -16,7 +16,7 @@ dotnet add package MistyDotDev.FluentOptions
 
 ## 📓 Examples
 
-A usage example can be found in the Examples directory.
+A usage example can be found in the [Examples](./Examples/FluentOptions.Example) directory.
 
 ## 🧑‍💻 Developing
 
