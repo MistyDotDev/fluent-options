@@ -1,10 +1,9 @@
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using MistyDotDev.FluentOptions;
 using Xunit;
 
-namespace FluentOptions.Tests.Unit;
+namespace MistyDotDev.FluentOptions.Tests.Unit;
 
 public sealed class FluentOptionsExtensionsTests
 {

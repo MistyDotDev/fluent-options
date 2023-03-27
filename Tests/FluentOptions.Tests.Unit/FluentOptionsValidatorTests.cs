@@ -2,11 +2,10 @@ using FluentAssertions;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.Extensions.DependencyInjection;
-using MistyDotDev.FluentOptions;
 using NSubstitute;
 using Xunit;
 
-namespace FluentOptions.Tests.Unit;
+namespace MistyDotDev.FluentOptions.Tests.Unit;
 
 public sealed class FluentOptionsValidatorTests
 {
