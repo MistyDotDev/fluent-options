@@ -16,11 +16,11 @@
         <PackageId>MistyDotDev.FluentOptions</PackageId>
         <Title>MistyDotDev.FluentOptions</Title>
         <Authors>MistyDotDev</Authors>
-        <Description>FluentValidation for options</Description>
         <Version>1.0.0</Version>
-        <PackageProjectUrl>https://github.com/MistyDotDev/ignition</PackageProjectUrl>
-        <License>https://github.com/MistyDotDev/ignition/blob/main/LICENSE</License>
-        <RepositoryUrl>https://github.com/MistyDotDev/ignition</RepositoryUrl>
+        <Description>Validate options using FluentValidation</Description>
+        <PackageProjectUrl>https://github.com/MistyDotDev/fluent-options</PackageProjectUrl>
+        <License>https://github.com/MistyDotDev/fluent-options/blob/main/LICENSE</License>
+        <RepositoryUrl>https://github.com/MistyDotDev/fluent-options</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

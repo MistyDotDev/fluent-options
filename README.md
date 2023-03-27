@@ -2,7 +2,7 @@
 
 ## ❓ About
 
-FluentValidation for options!
+Validate options using FluentValidation
 
 ## 📝 Installing
 
